@@ -2220,7 +2220,7 @@ console.log(process.env.MONGO_URL)
 const app = express(); 
 
 // CONNECTION  path 
-const PORT = 4000;
+const PORT = process.env.PORT;
 // const MONGO_URL = "mongodb://127.0.0.1" 
 const MONGO_URL = process.env.MONGO_URL
 
@@ -2228,7 +2228,7 @@ const MONGO_URL = process.env.MONGO_URL
 await client.connect(); // call pandra method 
 console.log("mongo is connected")
 
-const movies = [
+const movies = [ 
   {
   "id": "99",
   "name": "Vikram",
